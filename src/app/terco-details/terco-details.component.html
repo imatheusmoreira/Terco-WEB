@@ -52,7 +52,7 @@
     </div>
   </div>
   <p>
-  <div class="ui three statistics">
+  <div *ngIf="oracaoContador > 0" class="ui three statistics">
     <div class="statistic">
       <div class="value">
         <i class="hourglass start icon"></i> {{oracaoContador}}
@@ -91,7 +91,7 @@
     </div>
   </div>
   <p>
-  <div  class="ui three statistics">
+  <div *ngIf="oracaoContador > 0" class="ui three statistics">
     <div class="statistic">
       <div class="value">
         <i class="hourglass start icon"></i> {{oracaoContador}}
