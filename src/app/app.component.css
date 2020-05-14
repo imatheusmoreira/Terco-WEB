@@ -2,10 +2,13 @@
 
 @media screen and (min-width: 501px) {
   #botaoFlutuante{
-    visibility: hidden;
+    display: none;
   }
-  .ui.menu{
+  #menuComputador{
     visibility: visible;
+  }
+  #menuCelular{
+    display: none;
   }
 }
 
@@ -13,9 +16,26 @@
   #botaoFlutuante{
     visibility: visible;
   }
-  .ui.menu{
-    visibility: hidden;
+  #menuComputador{
+    display: none;
   }
+  #menuCelular{
+    visibility: visible;
+  }
+}
+
+#containerApp{
+  background-image: linear-gradient(to top, rgba(255,0,0,0), aquamarine)
+}
+
+#menuComputador{
+  height: 60px;
+  opacity: 0.8;
+}
+#menuCelular{
+  height: 60px;
+  opacity: 0.8;
+  margin-top: auto;
 }
 
 /*Botão flutuante*/

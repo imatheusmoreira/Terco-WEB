@@ -1,4 +1,4 @@
-<div class="ui menu" style="height: 60px; opacity: 0.8;">
+<div class="ui menu" id="menuComputador">
   <div class="item">
     <img src="./assets/img/tercoLogo.png" draggable="false" alt={{titulo}}>
   </div>
@@ -7,15 +7,25 @@
   <div class="right menu">
     <a class="item"><b>{{nomeTipoMisterio}}</b></a>
     <a routerLink="/sobre" routerLinkActive="active" class="item">Sobre</a>
-    </div>
+  </div>
 </div>
-<div class="ui fluid container" style="background-image: linear-gradient(to top, rgba(255,0,0,0), aquamarine);">
+
+<div class="ui menu" id="menuCelular">
+  <div class="item">
+    <img src="./assets/img/tercoLogo.png" draggable="false" alt={{titulo}}>
+  </div>
+  <div class="right menu">
+    <a class="item"><b>{{nomeTipoMisterio}}</b></a>
+  </div>
+</div>
+
+<div class="ui fluid container" id="containerApp">
   <router-outlet></router-outlet>
   <div id="botaoFlutuante">
     <div class="fabs">
-      <a routerLink="/sobre" class="fab orange" tooltip="Sobre"><i class="question icon"></i></a>
-      <a routerLink="/rezar" class="fab light-blue" tooltip="Rezar o Terço"><i class="play icon"></i></a>
-      <a routerLink="/home" class="fab indigo" tooltip="Início"><i class="home icon"></i></a>
+      <a routerLink="/sobre" class="fab cyan" tooltip="Sobre"><i class="question icon"></i></a>
+      <a routerLink="/rezar" class="fab teal" tooltip="Rezar o Terço"><i class="play icon"></i></a>
+      <a routerLink="/home" class="fab green" tooltip="Início"><i class="home icon"></i></a>
       <a target="_blank" class="fab red" tooltip="Opções"><i class="bars icon"></i></a>
     </div>
   </div>

@@ -25,46 +25,6 @@ export class TercoRezarComponent implements OnInit {
     this.atualizaTexto();
   }
 
-
-  public getOracao(oracaoId) {
-    switch (oracaoId) {
-      case 1:
-        return "Sinal da cruz#Em nome do Pai do Filho e do Espírito Santo. Amém.";
-      case 2:
-        return "Oferecimento#Divino Jesus, nós Vos oferecemos este terço que vamos rezar, meditando nos mistérios da Vossa Redenção. Concedei-nos, por intercessão da Virgem Maria, Mãe de Deus e nossa Mãe, as virtudes que nos são necessárias para bem rezá-lo e a graça de ganharmos as indulgências desta santa devoção.";
-      case 3:
-        return "Invocação do Espírito Santo#Vinde, Espírito Santo, enchei os corações dos vossos fiéis e acendei neles o fogo do vosso amor. Enviai o vosso Espírito e tudo será criado, e renovareis a face da terra." +
-          " Oremos: Ó Deus, que instruístes os corações dos vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos sempre da sua consolação. Por Cristo Senhor Nosso. Amém.";
-      case 4:
-        return "Creio em Deus#Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor; que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado. Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos; creio no Espírito Santo, na Santa Igreja Católica, na comunhão dos Santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.";
-      case 5:
-        return "Pai Nosso#Pai Nosso, que estais no Céu, Santificado seja o Vosso Nome, Venha a nós o Vosso Reino, Seja feita a Vossa Vontade, Assim na Terra como no Céu, O Pão-Nosso de cada dia nos daí hoje, perdoai-nos as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do Mal.";
-      case 6:
-        return "Ave Maria#Ave-Maria, cheia de graça!O Senhor é convosco; Bendita sois vóis entre as mulheres; E Bendito é o Fruto do vosso ventre, Jesus; Santa Maria Mãe de Deus, Rogai por nós os pecadores; Agora e na hora de nossa morte. Amém";
-      case 7:
-        return "Glória ao Pai#Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém";
-      case 8:
-        return "Óh! meu Jesus...#Óh! meu Jesus, perdoai-nos, livrai-nos do fogo do inferno. Levai as almas todas para o céu e socorrei principalmente as que mais precisarem.";
-      case 9:
-        return "Infinitas graças vos damos...#Infinitas graças vos damos, Soberana Rainha, pelos benefícios que todos os dias recebemos de vossas mãos liberais. Dignai-vos agora e para sempre tomar-nos debaixo de vosso poderoso amparo e para mais vos suplicar vos saudamos com uma Salve Rainha.";
-      case 10:
-        return "Salve Rainha#Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos os degredados filhos de Eva. A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei, e depois deste desterro mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce e sempre Virgem Maria.Rogai por nós, Santa Mãe de Deus. Para que sejamos dignos das promessas de Cristo. Amém";
-      case 21:
-        return this.getRecitacaoMisterio(1);
-      case 22:
-        return this.getRecitacaoMisterio(2);
-      case 23:
-        return this.getRecitacaoMisterio(3);
-      case 24:
-        return this.getRecitacaoMisterio(4);
-      case 25:
-        return this.getRecitacaoMisterio(5);
-      default:
-        return "Pronto para começar?#Assim que estiver pronto para começar, aperte em \"Próximo\""
-        break;
-    }
-  }
-
   atualizaTexto(){
     this.oracaoTitulo = this.getOracao(this.oracao).split("#")[0]
     this.oracaoTexto = this.getOracao(this.oracao).split("#")[1]
@@ -162,7 +122,7 @@ export class TercoRezarComponent implements OnInit {
     return d.getDay();//Outputs 1 when it's Monday.
   }
 
-  /*1=Gloriosos, 2=Gozosos, 3=Dolorosos*/
+  /*1=Gloriosos, 2=Gozosos, 3=Dolorosos, 4=Luminosos*/
   getNumeroTipoMisterio(){
     var d = new Date();
     var numDiaDaSemana = d.getDay();//Outputs 1 when it's Segunda.
@@ -176,7 +136,7 @@ export class TercoRezarComponent implements OnInit {
       case 3://Quarta
         return 1
       case 4://Quinta
-        return 2
+        return 4
       case 5://Sexta
         return 3
       case 6://Sábado
@@ -193,11 +153,11 @@ export class TercoRezarComponent implements OnInit {
       case 1://Primeiro mistério
         switch (numeroTipoMisterio) {
           case 1://Gloriosos
-            return "Primeiro Mistério#Neste primeiro mistério contemplamos a Ressurreição. Fruto do Mistério: O amor de Deus e o fervor no Vosso serviço."
+            return "Primeiro Mistério#Neste primeiro mistério contemplamos a Ressurreição de Jesus. Fruto do Mistério: O amor de Deus e o fervor no Vosso serviço."
           case 2://Gozosos
-            return "Primeiro Mistério#Neste primeiro mistério contemplamos a Anunciação. Fruto do Mistério: Profunda humildade."
+            return "Primeiro Mistério#Neste primeiro mistério contemplamos a Anunciação do Anjo Gabriel a Maria. Fruto do Mistério: Profunda humildade."
           case 3://Dolorosos
-            return "Primeiro Mistério#Neste primeiro mistério contemplamos a Agonia no Horto das Oliveiras. Fruto do Mistério: Contrição dos pecados."
+            return "Primeiro Mistério#Neste primeiro mistério contemplamos a Agonia de Jesus no Horto das Oliveiras. Fruto do Mistério: Contrição dos pecados."
           case 4://Luminosos
             return "Primeiro Mistério#Neste primeiro mistério contemplamos o Batismo de Jesus no rio Jordão. Fruto do mistério: A graça de ser cheio do Espírito Santo."
           default://Desconhecido
@@ -207,9 +167,9 @@ export class TercoRezarComponent implements OnInit {
       case 2://Segundo mistério
         switch (numeroTipoMisterio) {
           case 1://Gloriosos
-            return "Segundo Mistério#Neste segundo mistério contemplamos a Ascensão. Fruto do Mistério: Um ardente desejo do Céu, nossa cara pátria."
+            return "Segundo Mistério#Neste segundo mistério contemplamos a Ascensão de Jesus nos Céus. Fruto do Mistério: Um ardente desejo do Céu, nossa cara pátria."
           case 2://Gozosos
-            return "Segundo Mistério#Neste segundo mistério contemplamos a Visitação. Fruto do Mistério: Caridade para com o próximo."
+            return "Segundo Mistério#Neste segundo mistério contemplamos a Visita de Maria à sua prima Isabel. Fruto do Mistério: Caridade para com o próximo."
           case 3://Dolorosos
             return "Segundo Mistério#Neste segundo mistério contemplamos a Flagelação de Cristo. Fruto do Mistério: Mortificação dos nossos sentidos."
           case 4://Luminosos
@@ -223,7 +183,7 @@ export class TercoRezarComponent implements OnInit {
           case 1://Gloriosos
             return "Terceiro Mistério#Neste terceiro mistério contemplamos a Vinda do Espírito Santo. Fruto do Mistério: A descida do Espírito Santo em nossas almas."
           case 2://Gozosos
-            return "Terceiro Mistério#Neste terceiro mistério contemplamos a Natividade. Fruto do Mistério: Desapego aos bens terrenos, à riqueza e um amor à pobreza."
+            return "Terceiro Mistério#Neste terceiro mistério contemplamos o Nascimento de Jesus em Belém. Fruto do Mistério: Desapego aos bens terrenos, à riqueza e um amor à pobreza."
           case 3://Dolorosos
             return "Terceiro Mistério#Neste terceiro mistério contemplamos a Coroação de Espinhos. Fruto do Mistério: O Desprezo do mundo."
           case 4://Luminosos
@@ -235,11 +195,11 @@ export class TercoRezarComponent implements OnInit {
       case 4://Quarto mistério
         switch (numeroTipoMisterio) {
           case 1://Gloriosos
-            return "Quarto Mistério#Neste quarto mistério contemplamos a Assunção de Maria. Fruto do Mistério: Uma terna devoção a tão boa Mãe."
+            return "Quarto Mistério#Neste quarto mistério contemplamos a Assunção de Maria aos Céus. Fruto do Mistério: Uma terna devoção a tão boa Mãe."
           case 2://Gozosos
-            return "Quarto Mistério#Neste quarto mistério contemplamos a Apresentação de Jesus no Templo. Fruto do Mistério: Uma pureza de alma e de corpo."
+            return "Quarto Mistério#Neste quarto mistério contemplamos a Apresentação de Jesus no Templo e Purificação de Maria. Fruto do Mistério: Uma pureza de alma e de corpo."
           case 3://Dolorosos
-            return "Quarto Mistério#Neste quarto mistério contemplamos o Transporte da Cruz. Fruto do Mistério: Paciência nas nossas cruzes."
+            return "Quarto Mistério#Neste quarto mistério contemplamos Jesus carregando a Cruz. Fruto do Mistério: Paciência nas nossas cruzes."
           case 4://Luminosos
             return "Quarto Mistério#Neste quarto mistério contemplamos a Transfiguração de Jesus. Fruto do mistério: A graça de sermos configurados à Divina Humanidade de Jesus."
           default://Desconhecido
@@ -249,11 +209,11 @@ export class TercoRezarComponent implements OnInit {
       case 5://Quinto mistério
         switch (numeroTipoMisterio) {
           case 1://Gloriosos
-            return "Quinto Mistério#Neste quinto mistério contemplamos a Coroação de Maria. Fruto do Mistério: Perseverança na graça e a Coroa da Glória."
+            return "Quinto Mistério#Neste quinto mistério contemplamos a Coroação de Maria, como Rainha dos Céus. Fruto do Mistério: Perseverança na graça e a Coroa da Glória."
           case 2://Gozosos
             return "Quinto Mistério#Neste quinto mistério contemplamos o Encontro do Menino Jesus no templo. Fruto do Mistério: A verdadeira sabedoria."
           case 3://Dolorosos
-            return "Quinto Mistério#Neste quinto mistério contemplamos a Crucificação. Fruto do Mistério: A conversão dos pecadores, a perseverança dos justos e o alívio das almas do Purgatório."
+            return "Quinto Mistério#Neste quinto mistério contemplamos a Crucificação de Jesus. Fruto do Mistério: A conversão dos pecadores, a perseverança dos justos e o alívio das almas do Purgatório."
           case 4://Luminosos
             return "Quinto Mistério#Neste quinto mistério contemplamos a Instituição da Eucaristia. Fruto do mistério: A graça de termos sempre um coração adorador."
           default://Desconhecido
@@ -262,6 +222,45 @@ export class TercoRezarComponent implements OnInit {
 
       default:
         return "Mistério desconhecido!#Não existe " + numeroMisterio+ "º mistério.";
+    }
+  }
+
+  public getOracao(oracaoId) {
+    switch (oracaoId) {
+      case 1:
+        return "Sinal da cruz#Em nome do Pai do Filho e do Espírito Santo. Amém.";
+      case 2:
+        return "Oferecimento#Divino Jesus, nós Vos oferecemos este terço que vamos rezar, meditando nos mistérios da Vossa Redenção. Concedei-nos, por intercessão da Virgem Maria, Mãe de Deus e nossa Mãe, as virtudes que nos são necessárias para bem rezá-lo e a graça de ganharmos as indulgências desta santa devoção.";
+      case 3:
+        return "Invocação do Espírito Santo#Vinde, Espírito Santo, enchei os corações dos vossos fiéis e acendei neles o fogo do vosso amor. Enviai o vosso Espírito e tudo será criado, e renovareis a face da terra." +
+          " Oremos: Ó Deus, que instruístes os corações dos vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas segundo o mesmo Espírito e gozemos sempre da sua consolação. Por Cristo Senhor Nosso. Amém.";
+      case 4:
+        return "Creio em Deus#Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor; que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado. Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos; creio no Espírito Santo, na Santa Igreja Católica, na comunhão dos Santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.";
+      case 5:
+        return "Pai Nosso#Pai Nosso, que estais no Céu, Santificado seja o Vosso Nome, Venha a nós o Vosso Reino, Seja feita a Vossa Vontade, Assim na Terra como no Céu, O Pão-Nosso de cada dia nos daí hoje, perdoai-nos as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido, e não nos deixeis cair em tentação, mas livrai-nos do Mal.";
+      case 6:
+        return "Ave Maria#Ave-Maria, cheia de graça!O Senhor é convosco; Bendita sois vóis entre as mulheres; E Bendito é o Fruto do vosso ventre, Jesus; Santa Maria Mãe de Deus, Rogai por nós os pecadores; Agora e na hora de nossa morte. Amém";
+      case 7:
+        return "Glória ao Pai#Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre. Amém";
+      case 8:
+        return "Óh! meu Jesus...#Óh! meu Jesus, perdoai-nos, livrai-nos do fogo do inferno. Levai as almas todas para o céu e socorrei principalmente as que mais precisarem.";
+      case 9:
+        return "Infinitas graças vos damos...#Infinitas graças vos damos, Soberana Rainha, pelos benefícios que todos os dias recebemos de vossas mãos liberais. Dignai-vos agora e para sempre tomar-nos debaixo de vosso poderoso amparo e para mais vos suplicar vos saudamos com uma Salve Rainha.";
+      case 10:
+        return "Salve Rainha#Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos os degredados filhos de Eva. A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei, e depois deste desterro mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce e sempre Virgem Maria.Rogai por nós, Santa Mãe de Deus. Para que sejamos dignos das promessas de Cristo. Amém";
+      case 21:
+        return this.getRecitacaoMisterio(1);
+      case 22:
+        return this.getRecitacaoMisterio(2);
+      case 23:
+        return this.getRecitacaoMisterio(3);
+      case 24:
+        return this.getRecitacaoMisterio(4);
+      case 25:
+        return this.getRecitacaoMisterio(5);
+      default:
+        return "Pronto para começar?#Assim que estiver pronto para começar, aperte em \"Próximo\""
+        break;
     }
   }
 

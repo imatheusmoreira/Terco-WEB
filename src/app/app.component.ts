@@ -33,13 +33,13 @@ export class AppComponent {
       case 3://Quarta
         return "Mistérios Gloriosos"
       case 4://Quinta
-        return "Mistérios Gozosos"
+        return "Mistérios Luminosos"
       case 5://Sexta
         return "Mistérios Dolorosos"
       case 6://Sábado
         return " Mistérios Gloriosos"
       default:
-        return "Mistérios gozosos"
+        return "Mistérios Gozosos"
     }
   }
 }
