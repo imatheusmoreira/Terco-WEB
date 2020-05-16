@@ -1,32 +1,33 @@
 <div class="ui menu" id="menuComputador">
-  <div class="item">
-    <img src="./assets/img/tercoLogo.png" draggable="false" alt={{titulo}}>
-  </div>
-  <a routerLink="/home" routerLinkActive="active" class="item">Início</a>
-  <a routerLink="/rezar" routerLinkActive="active" class="item">Rezar o terço</a>
-  <div class="right menu">
-    <a class="item"><b>{{nomeTipoMisterio}}</b></a>
-    <a routerLink="/sobre" routerLinkActive="active" class="item">Sobre</a>
-  </div>
+    <div class="item">
+        <img src="./assets/img/tercoLogo.png" draggable="false" alt={{titulo}}>
+    </div>
+    <a routerLink="/home" routerLinkActive="active" class="item">Início</a>
+    <a routerLink="/rezar" routerLinkActive="active" class="item">Rezar o terço</a>
+    <div class="right menu">
+        <a class="item"><b>{{nomeTipoMisterio}}</b></a>
+        <a routerLink="/sobre" routerLinkActive="active" class="item">Sobre</a>
+    </div>
 </div>
 
 <div class="ui menu" id="menuCelular">
-  <div class="item">
-    <img src="./assets/img/tercoLogo.png" draggable="false" alt={{titulo}}>
-  </div>
-  <div class="right menu">
-    <a class="item"><b>{{nomeTipoMisterio}}</b></a>
-  </div>
+    <div class="item">
+        <img src="./assets/img/tercoLogo.png" draggable="false" alt={{titulo}}>
+    </div>
+    <div class="right menu">
+        <a class="item"><b>{{nomeTipoMisterio}}</b></a>
+    </div>
 </div>
 
 <div class="ui fluid container" id="containerApp">
-  <router-outlet></router-outlet>
-  <div id="botaoFlutuante">
-    <div class="fabs">
-      <a routerLink="/sobre" class="fab cyan" tooltip="Sobre"><i class="question icon"></i></a>
-      <a routerLink="/rezar" class="fab teal" tooltip="Rezar o Terço"><i class="play icon"></i></a>
-      <a routerLink="/home" class="fab green" tooltip="Início"><i class="home icon"></i></a>
-      <a target="_blank" class="fab red" tooltip="Opções"><i class="bars icon"></i></a>
+    <router-outlet></router-outlet>
+    <div id="botaoFlutuante">
+        <div class="fabs">
+            <a routerLink="/sobre" class="fab cyan" tooltip="Sobre"><i class="question icon"></i></a>
+            <a routerLink="/rezar" class="fab teal" tooltip="Rezar o Terço"><i class="play icon"></i></a>
+            <a routerLink="/home" class="fab green" tooltip="Início"><i class="home icon"></i></a>
+            <a target="_blank" class="fab red" tooltip="Opções"><i class="bars icon"></i></a>
+        </div>
     </div>
-  </div>
 </div>
+<app-footer> </app-footer>

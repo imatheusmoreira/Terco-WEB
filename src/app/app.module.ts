@@ -7,6 +7,7 @@ import { TercoDetailsComponent } from './terco-details/terco-details.component';
 import { TercoRezarComponent } from './terco-rezar/terco-rezar.component';
 import { TercoHomeComponent } from './terco-home/terco-home.component';
 import { TercoSobreComponent } from './terco-sobre/terco-sobre.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TercoSobreComponent } from './terco-sobre/terco-sobre.component';
     TercoDetailsComponent,
     TercoRezarComponent,
     TercoHomeComponent,
-    TercoSobreComponent
+    TercoSobreComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
