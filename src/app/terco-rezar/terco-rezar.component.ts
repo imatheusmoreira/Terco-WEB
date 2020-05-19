@@ -117,11 +117,6 @@ export class TercoRezarComponent implements OnInit {
     return oracoes;
   }
 
-  getNumeroDiaDaSemana() {
-    var d = new Date();
-    return d.getDay();//Outputs 1 when it's Monday.
-  }
-
   /*1=Gloriosos, 2=Gozosos, 3=Dolorosos, 4=Luminosos*/
   getNumeroTipoMisterio(){
     var d = new Date();
@@ -259,7 +254,7 @@ export class TercoRezarComponent implements OnInit {
       case 25:
         return this.getRecitacaoMisterio(5);
       default:
-        return "Pronto para começar?#Assim que estiver pronto para começar, aperte em \"Próximo\""
+        return "Pronto para começar?#Assim que estiver pronto para começar, aperte em \"Iniciar\""
         break;
     }
   }
