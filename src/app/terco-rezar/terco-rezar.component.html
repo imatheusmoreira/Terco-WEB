@@ -6,7 +6,10 @@
     <div class="ui mini right floated buttons" style="opacity: 0.9;">
       <button class="ui icon button" (click)="voltar()"><i class="ui backward icon"></i></button>
       <div class="or" data-text="ou"></div>
-      <button class="ui teal button" (click)="avancar()" >Próximo</button>
+      <button class="ui teal button" (click)="avancar()" >
+        <span *ngIf="contadorGlobal < 0" >Iniciar</span>
+        <span *ngIf="contadorGlobal >= 0" >Próximo</span>
+      </button>
     </div>
   </div>
 </div>
